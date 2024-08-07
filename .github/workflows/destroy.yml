@@ -17,6 +17,13 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Destroy Resource Group
+    # - name: Destroy Resource Group
+    #   run: |
+    #     az group delete --name securitycopilot --yes --no-wait
+      
+    - name: List and Delete All Resources in Resource Group
       run: |
-        az group delete --name securitycopilot --yes --no-wait
+        resources=$(az resource list --resource-group securitycopilot --query "[].id" -o tsv)
+        for resource in $resources; do
+          az resource delete --ids $resource
+        done
