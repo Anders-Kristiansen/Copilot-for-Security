@@ -35,12 +35,8 @@ To use this repository, you need to do the following:
 
 3. Update the parameters in the `main.bicepparam` file and the GitHub Actions workflows as necessary.
 
-Please note that deleting a resource group will delete all resources within that group. Make sure this is what you want before running the destruction workflow.
+In devo we use allready existing identities. 
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request.
-
-## License
-
-This project is licensed under the terms of the MIT license.
