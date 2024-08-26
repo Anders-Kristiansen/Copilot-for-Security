@@ -30,13 +30,9 @@ To use this repository, you need to do the following:
 
 - Run the following command in Cloud Shell or another PowerShell window with right permissions to create a Service Principal with **Contributor** rights.
   `az ad sp create-for-rbac --name {app-name} --role contributor --scopes /subscriptions/{subscription-id}/resourceGroups/exampleRG --json-auth`
-  *example*:╰─  az ad sp create-for-rbac --name securitycopilotautomation --role contributor --scopes /subscriptions/c72fdcc8-7281-4c4a-8694-7d4f883f7975  --json-auth
+  *example*:╰─  az ad sp create-for-rbac --name securitycopilotautomation --role contributor --scopes /subscriptions/"subid"  --json-auth
 - Copy the output and then paste it in the **Value** section when you are creating the new secret in GitHub Actions.
 
 3. Update the parameters in the `main.bicepparam` file and the GitHub Actions workflows as necessary.
 
-In devo we use allready existing identities. 
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request.
+THIS IS JUST FOR DEMO purposes, i would use manged identies in production.
